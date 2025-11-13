@@ -1,16 +1,32 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image, Platform } from 'react-native';
+import React, { PropsWithChildren } from 'react';
+import { View, Text, StyleSheet, Image, ImageSourcePropType } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const Card = ({ title, imageUrl, children }: any) => {
+type CardProps = PropsWithChildren<{
+  title?: string;
+  imageUrl?: ImageSourcePropType;
+  subtitle?: string;
+  ratings?: number;
+}>;
+
+const Card = ({ title, imageUrl, subtitle, ratings }: CardProps) => {
   return (
     <View style={styles.cardContainer}>
       {imageUrl && (
-        <Image source={{ uri: imageUrl }} style={styles.image} />
+        <Image source={imageUrl} style={styles.image} />
       )}
       {title && (
         <Text style={styles.title}>{title}</Text>
       )}
-      {children}
+      {subtitle && (
+        <Text style={styles.subtitle}>{subtitle}</Text>
+      )}
+      {ratings && (
+        <Text style={styles.ratings}>
+          <Ionicons name="star" size={16} color="#ff8c00ff" /> {ratings}</Text>
+      )} 
+      {(<Ionicons name="heart-outline" size={25} color="#232323ff" 
+      style={{ right: -135, top: -20 }} />)}
     </View>
   );
 };
@@ -18,35 +34,45 @@ const Card = ({ title, imageUrl, children }: any) => {
 const styles = StyleSheet.create({
   cardContainer: {
     backgroundColor: '#ffffffff',
-    borderRadius: 12,
-    overflow: 'hidden', // Ensures the image corners are also rounded
-    width: '100%', // The card will fill the container it's placed in
+    borderRadius: 14,
+    //overflow: 'hidden',
+    width: '100%',
     height: '100%',
-    
-    // Platform-specific shadows
-    ...Platform.select({
-      ios: {
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 5,
-      },
-      android: {
-        elevation: 5,
-      },
-    }),
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 5,
   },
   image: {
-    width: '100%',
-    height: '70%',
-    resizeMode: 'cover',
+     resizeMode: "contain",
+    height: 115,
+    width: 125,
+    left: 25,
   },
   title: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
     marginTop: 10,
     marginHorizontal: 10,
+    color: '#3C2F2F',
+    justifyContent: 'flex-start'
   },
+  subtitle: {
+    fontSize: 14,
+    //marginTop: 10,
+    marginHorizontal: 10,
+    color: '#3C2F2F',
+    justifyContent: 'flex-start'
+  },
+  ratings:{
+    fontSize: 14,
+    fontWeight: '500',
+    marginTop: 8,
+    marginHorizontal: 10,
+    color: '#3C2F2F',
+    justifyContent: 'flex-start'
+  }
 });
 
 export default Card;

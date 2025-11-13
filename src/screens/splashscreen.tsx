@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Platform } from 'react-native';
 import { useNavigation, StackActions } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import LinearGradient from 'react-native-linear-gradient';
@@ -53,7 +53,10 @@ const styles = StyleSheet.create({
     transform: [{ translateY: -60 }], 
   },
   logoText: {
-    fontFamily: 'Lobster-Regular',
+    fontFamily: Platform.select({
+      ios: 'Lobster-Regular', 
+      android: 'lobster_regular', 
+    }),
     fontWeight: '400',
     fontSize: 60,
     lineHeight: 60,

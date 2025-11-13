@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import {  Text, StyleSheet, TouchableOpacity, Alert, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation/types'; 
@@ -78,7 +78,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   title: {
-    fontFamily: 'Lobster-Regular',
+    fontFamily: Platform.select({
+      ios: 'Lobster-Regular', 
+      android: 'lobster_regular', 
+    }),
     fontWeight: '400',
     fontSize: 40,
     lineHeight: 60,
@@ -106,7 +109,10 @@ const styles = StyleSheet.create({
   linkText: {
     color: '#EF2A39', 
     fontWeight: 'bold',
-    fontFamily: 'Lobster-Regular',
+    fontFamily: Platform.select({
+      ios: 'Lobster-Regular', 
+      android: 'lobster_regular', 
+    }),
   },
   loginButton: {
     backgroundColor: '#EF2A39',
@@ -119,7 +125,10 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 19,
     fontWeight: '500',
-    fontFamily: 'Lobster-Regular',
+    fontFamily: Platform.select({
+      ios: 'Lobster-Regular', 
+      android: 'lobster_regular', 
+    }),
   },  
 });
 

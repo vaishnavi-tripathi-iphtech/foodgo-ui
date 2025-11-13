@@ -5,9 +5,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackParamList } from './src/navigation/types';
 import SplashScreen from './src/screens/splashscreen';
 import LoginScreen from './src/screens/loginscreen';
-import MainTabNavigator from './src/navigation/mainTabNavigation';
+
 
 import RegisterScreen from './src/screens/registerscreen';
+import AppNavigator from './src/navigation/mainTabNavigation';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -24,7 +25,7 @@ const App = () => {
         <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
-        <Stack.Screen name="MainApp" component={MainTabNavigator} />
+        <Stack.Screen name="MainApp" component={AppNavigator} />
 
       </Stack.Navigator>
     </NavigationContainer>

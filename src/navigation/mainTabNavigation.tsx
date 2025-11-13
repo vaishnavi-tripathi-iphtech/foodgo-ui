@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeStackNavigator from './homeStackNavigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import CustomTabBar from './customtabbar';
@@ -9,8 +10,11 @@ import HomeScreen from '../screens/tabs/homescreen';
 import ProfileScreen from '../screens/tabs/profilescreen';
 import CustomerSupport from '../screens/tabs/customersupport';
 import Favourites from '../screens/tabs/favourites';
+// ProductDetailScreen moved into Home stack navigator file
+
 
 const Tab = createBottomTabNavigator();
+/* HomeStackNavigator moved to src/navigation/homeStackNavigation.tsx */
 
 const TAB_ICONS: Record<string, { focused: string; default: string }> = {
   Home: { focused: 'home', default: 'home-outline' },
@@ -41,9 +45,8 @@ const MainTabNavigator = () => {
         tabBarIcon: renderTabIcon(route.name),
       })}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
+  <Tab.Screen name="Home" component={HomeStackNavigator} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
-
       {/* Center FAB placeholder */}
       <Tab.Screen
         name="Add"

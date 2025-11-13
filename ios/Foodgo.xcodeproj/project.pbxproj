@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-Foodgo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Foodgo.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		432868C18A424B399B4163E8 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 116B7C38303340B8B9CE5F3D /* Lobster-Regular.ttf */; };
+		4137EA879C774B3892FF005F /* lobster_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B937C0D7F4B4855AE35B6D8 /* lobster_regular.ttf */; };
 		53D003A316DE8F484D4C6AB8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -18,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		0E12F748E9E7440F96467711 /* OFL.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = OFL.txt; path = ../src/assets/fonts/Lobster/OFL.txt; sourceTree = "<group>"; };
-		116B7C38303340B8B9CE5F3D /* Lobster-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lobster-Regular.ttf"; path = "../src/assets/fonts/Lobster/Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Foodgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Foodgo/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Foodgo/Info.plist; sourceTree = "<group>"; };
@@ -27,6 +26,7 @@
 		5709B34CF0A7D63546082F79 /* Pods-Foodgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodgo.release.xcconfig"; path = "Target Support Files/Pods-Foodgo/Pods-Foodgo.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Foodgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Foodgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Foodgo/AppDelegate.swift; sourceTree = "<group>"; };
+		7B937C0D7F4B4855AE35B6D8 /* lobster_regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = lobster_regular.ttf; path = ../src/assets/fonts/Lobster/lobster_regular.ttf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Foodgo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -106,8 +106,8 @@
 		D8C6F46868194708B63B0017 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				116B7C38303340B8B9CE5F3D /* Lobster-Regular.ttf */,
 				0E12F748E9E7440F96467711 /* OFL.txt */,
+				7B937C0D7F4B4855AE35B6D8 /* lobster_regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -175,8 +175,8 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				53D003A316DE8F484D4C6AB8 /* PrivacyInfo.xcprivacy in Resources */,
-				432868C18A424B399B4163E8 /* Lobster-Regular.ttf in Resources */,
 				C2AC92ADE65A4F368E47BF7D /* OFL.txt in Resources */,
+				4137EA879C774B3892FF005F /* lobster_regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

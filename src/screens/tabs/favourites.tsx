@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Platform } from 'react-native';
 
 const Favourites = () => {
   return (
@@ -16,7 +16,10 @@ const styles = StyleSheet.create({
     alignItems: 'center' 
 },
   text: { 
-    fontFamily: 'Lobster-Regular',
+    fontFamily: Platform.select({
+      ios: 'Lobster-Regular', 
+      android: 'lobster_regular', 
+    }),
     fontSize: 24, 
     fontWeight: 'bold',
     color: '#f44b58' 

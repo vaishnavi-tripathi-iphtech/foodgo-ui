@@ -23,7 +23,7 @@ const CustomTabBar = ({ state, descriptors, navigation, fabIconName = 'add', fab
   const TAB_BAR_WIDTH = width;
   const TAB_BAR_HEIGHT = 80;
   const FAB_SIZE = 80;
-  const TAB_BAR_OFFSET = 1;
+  const TAB_BAR_OFFSET = 0.1;
   const NOTCH_RADIUS = FAB_SIZE / 2 ;
   //const NOTCH_WIDENING_OFFSET = 80;
 
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  
+   
   },
   fab: {
     position: 'absolute',
